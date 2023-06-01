@@ -50,4 +50,7 @@ def sign_in(request):
 def sign_out(request):
     logout(request)
     messages.success(request,f'You have been logged out.')
-    return redirect('login')   
+    return redirect('login')
+
+def home(request):
+    return render(request, 'users/home.html')  
