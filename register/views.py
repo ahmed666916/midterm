@@ -16,9 +16,12 @@ def sign_up(request):
             user.save()
             messages.success(request, 'You have signed up successfully.')
             login(request, user)
-            return redirect('posts')
+            return redirect('registration_success')
         else:
             return render(request, 'users/register.html', {'form': form})
+        
+def registration_success(request):
+    return render(request, 'users/registration_success.html')
 
 
 
