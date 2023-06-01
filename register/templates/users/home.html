@@ -2,5 +2,13 @@
 
 {% block content %}
 
-<h1>This is main page</h1>
+<h1>Welcome to the Payment Service</h1>
+
+<p>This is the main landing page of the website.</p>
+
+<div class="buttons-container">
+    <a href="{% url 'register' %}" class="btn-register">Register</a>
+    <a href="{% url 'login' %}" class="btn-login">Login</a>
+  </div>
+
 {% endblock content%}
